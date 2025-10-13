@@ -42,20 +42,25 @@ public class ExController {
 		return exService.ex70_int();
 	}
 	
-	@GetMapping("ex322")
+	@GetMapping("/ex322")
 	public String ex322() {
 		return exService.ex322();
 	}
 	
-	@GetMapping("ex324")
+	@GetMapping("/ex324")
 	public String ex324() {
 		return exService.ex324();
 	}
 	
 
-	@GetMapping("ex325")
+	@GetMapping("/ex325")
 	public String ex325() {
 		return exService.ex325();
+	}
+	
+	@GetMapping("/ex326")
+	public String ex326() {
+		return exService.ex326();
 	}
 	
 }

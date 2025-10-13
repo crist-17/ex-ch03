@@ -105,6 +105,30 @@ public class ExService {
 		log.info(result);
 		return result;
 	}
+
+	public String ex326() {
+
+		String result = "";
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add("public");
+		list.add("static");
+		list.add("void");
+		
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+			result += list.get(i) + "<br>";
+		}
+		list.remove(1);
+		int voidIndex = list.indexOf("void");
+		
+		result += "<br>void의 index = " + voidIndex;
+		
+		System.out.println("void의 index = " + voidIndex);
+		log.info(result);
+		return result;
+	}
 	
 	
 	
