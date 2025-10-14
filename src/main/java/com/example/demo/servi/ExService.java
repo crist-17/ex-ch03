@@ -1,6 +1,7 @@
 package com.example.demo.servi;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -19,24 +20,25 @@ public class ExService {
 		return msg;
 	}
 
+//----------------------------------
 	public String ex70() {
 		String result = "";
-		
+
 		int number = 1;
-		
-		if(number == 1) {
-			
+
+		if (number == 1) {
+
 			result = "if 블럭입니다";
-		}else if (number == 2) {
+		} else if (number == 2) {
 			result = "else if 블럭입니다.";
-		}else {
+		} else {
 			result = "elese 블럭입니다.";
 		}
 		System.out.println(result);
 		log.info(result);
-		
+
 		String msg = "ex70 결과는 : " + result;
-		
+
 		return msg;
 	}
 
@@ -45,11 +47,12 @@ public class ExService {
 		return 999;
 	}
 
+//----------------------------------
 	public String ex322() {
 		String result = "";
-		int[] array = {1,2,3,4,5};
-		
-		for (int i = 0; i <array.length; i++ ) {
+		int[] array = { 1, 2, 3, 4, 5 };
+
+		for (int i = 0; i < array.length; i++) {
 			String msg = "i = " + array[i];
 			result += msg + "<br>";
 		}
@@ -58,79 +61,165 @@ public class ExService {
 		return result;
 	}
 
-	public interface Car {public String getColor();}
-	
+	public interface Car {
+		public String getColor();
+	}
+
 	public class Sonata implements Car {
 		public Sonata() {
 			log.info("===출고===sonata");
 		}
+
 		@Override
 		public String getColor() {
 			return "=== 색상:red===sonata";
 		}
 	}
+
 	public class K5 implements Car {
-		
+
 		public K5() {
 			log.info("===출고===k5");
 		}
+
 		@Override
 		public String getColor() {
 			return "=== 색상:yellow===k5";
 		}
 	}
-	
+
+//----------------------------------	
 	public String ex324() {
 		Car car1 = new Sonata();
 		String re1 = car1.getColor();
 		Car car2 = new K5();
 		String re2 = car2.getColor();
-		
-		String result = re1 + "<br>" + re2 + "<br>" + "차 두대를 출고" ;
+
+		String result = re1 + "<br>" + re2 + "<br>" + "차 두대를 출고";
 		return result;
 	}
+//----------------------------------
 
 	public String ex325() {
 		String result = "";
-		
+
 		List<Integer> list = new ArrayList<>();
 		list.add(1);
 		list.add(2);
 		list.add(3);
-		
-		 for (int i = 0; i < list.size(); i++) {
-		        result += "list[" + i + "] = " + list.get(i) + "<br>";
-		    }
+
+		for (int i = 0; i < list.size(); i++) {
+			result += "list[" + i + "] = " + list.get(i) + "<br>";
+		}
 		System.out.println(result);
 		log.info(result);
 		return result;
 	}
 
+//----------------------------------
 	public String ex326() {
 
 		String result = "";
-		
+
 		List<String> list = new ArrayList<>();
-		
+
 		list.add("public");
 		list.add("static");
 		list.add("void");
-		
+
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i));
 			result += list.get(i) + "<br>";
 		}
 		list.remove(1);
 		int voidIndex = list.indexOf("void");
-		
+
 		result += "<br>void의 index = " + voidIndex;
-		
+
 		System.out.println("void의 index = " + voidIndex);
 		log.info(result);
 		return result;
 	}
+
+//--------------------
+
+	public String ex327() {
+
+		String result = "";
+
+		String str1 = new String("is same?");
+		String str2 = new String("is same?");
+
+		// 객체 비교
+		result += "str1 == str2 : " + (str1 == str2) + "<br>";
+		// 값 비교
+		result += "str1.equals(str2) : " + str1.equals(str2) + "<br>";
+
+		result += "< ex327, ex328 >";
+
+		System.out.println(result);
+
+		return result;
+	}
+
+//--------------------------------------
+
+	public String ex331() {
+		String result = "";
+
+		List<String> list = new ArrayList<>();
+
+		list.add("public");
+		list.add("static");
+		list.add("void");
+
+		// 익명클라스방식(오름차순)
+		list.sort(new Comparator<String>() {
+
+			@Override
+
+			public int compare(String str1, String str2) {
+				return str1.compareTo(str2);
+			}
+		});
+
+		result += "익명 클라스 정렬: " + list + "<br>";
+
+		// 람다식 방식
+		list.sort((Comparator<String>) (str1, str2) -> str1.compareTo(str2));
+
+		result += "람다식 정렬: " + list;
+
+		System.out.println(result);
+		log.info(result);
+		return result;
+	}
+
+
+
+//--------------------------------------
 	
-	
+	public String ex332() {
+		String result = "";
+		
+		List<String> list = new ArrayList<>();
+		list.add("public");
+		list.add("static");
+		list.add("void");
+		
+		list.forEach(str ->{
+			System.out.println(str);
+			log.info(str);
+		});
+		
+	for (String str : list) {
+		result += str + "<br>";
+	}
+		
+		
+		return result;
+	}
+
 	
 	
 
