@@ -1,9 +1,10 @@
-package com.example.demo.controll;
+package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.servi.ExService;
+import com.example.demo.service.ExService;
+
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -78,4 +79,54 @@ public class ExController {
 		return exService.ex332();
 	}
 	
+	@GetMapping("/ex333")
+	public String ex333() {
+		return exService.ex333();
+	}
+	
+	@GetMapping("/ex335")
+	public String ex335() {
+		return exService.ex335();
+	}
+	
+	@GetMapping("/ex337")
+	public String ex337() {
+		return exService.ex337();
+	}
+	
+	@GetMapping("/ex338")
+	public String ex338() {
+		return exService.ex338();
+	}
+	
+	@GetMapping("/ex339")
+	public String ex339() {
+		return exService.ex339();
+	}
+	
+	@GetMapping("/ex3310")
+	public String ex3310() {
+		return exService.ex3310();
+	}
+	
+	@GetMapping("/ex3311")
+	public String ex3311() {
+		return exService.ex3311();
+	}
+	
+	@GetMapping("/ex3312")
+	public String ex3312() {
+		return exService.ex3312();
+	}
+	
+	@GetMapping("/ex3313")
+	public String ex3313() {
+		return exService.ex3313();
+	}
+	
+	@GetMapping("/ex3314")
+	public String ex3314() {
+		return exService.ex3314();
+	}
+
 }
