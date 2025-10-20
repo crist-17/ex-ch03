@@ -1,13 +1,13 @@
-package com.pci.demo;
+package com.pci.myform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Calculator2Application {
+public class MyformApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Calculator2Application.class, args);
+		SpringApplication.run(MyformApplication.class, args);
 	}
 
 }

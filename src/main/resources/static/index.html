@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <h3>get방식</h3>
+    <form action="./article-get" method="get">
+        <input type="text" name="title">
+        <input type="text" name="content">
+        <input type="submit">
+    </form>
+
+    <h3>post방식
+        @ModelAttribute 로해줌
+    </h3>
+     <form action="./article-post" method="post">
+        <input type="text" name="title">
+        <input type="text" name="content">
+        <input type="submit">
+    </form>
+	
+	<h3>postman방식</h3>
+    <p>postman으로 테스트하
+       
+    </p>
+	   <form action="./article-postman" method="post">
+	      <input type="text" name="title">
+	      <input type="text" name="content">
+	      <input type="submit">
+	  </form>
+
+      
+        <h3>post_aoto방식</h3>
+     <form action="./article-auto" method="post">
+        <input type="text" name="title">
+        <input type="text" name="content">
+        <input type="submit">
+    </form>
+
+     <p>postman으로 테스트하세요
+        "/article-postman"
+    </p>
+    <img src="./img/cap.png" style="width: 600px; height: 400px;" alt="캡쳐" >
+
+</body>
+</html>
