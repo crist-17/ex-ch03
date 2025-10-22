@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.pci.demo.dto2;
 
 public record CalculationResponse(double num1,
 		double num2,

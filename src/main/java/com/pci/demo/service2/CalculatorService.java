@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.pci.demo.service2;
 
 import org.springframework.stereotype.Service;
 

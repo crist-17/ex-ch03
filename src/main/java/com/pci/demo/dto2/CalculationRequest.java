@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.pci.demo.dto2;
 
 public class CalculationRequest {
 

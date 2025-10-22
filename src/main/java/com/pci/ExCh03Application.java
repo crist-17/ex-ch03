@@ -1,13 +1,14 @@
-package com.example.demo;
+package com.pci;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {
-    "com.example.demo",  // 기존 프로젝트 패키지
-    "com.pci"       // 새로 옮겨온 calculator2 쪽 패키지
-    
-})
+//@SpringBootApplication(scanBasePackages = {
+//    "com.example.demo",  // 기존 프로젝트 패키지
+//    "com.pci"       // 새로 옮겨온 calculator2 쪽 패키지
+//    
+//})
+@SpringBootApplication
 public class ExCh03Application {
 
     public static void main(String[] args) {
